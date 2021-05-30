@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Form.module.css';
+import useSelect from '../hooks/useSelect';
 
 const Form = () => {
+	const [category, NewsSelect] = useSelect();
 	return (
 		<div className={`${styles.heading} row`}>
 			<div className="col s12 m8 offset-m2">
