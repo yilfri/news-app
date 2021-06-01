@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const News = ({ article }) => {
 	const { urlToImage, url, title, description, source } = article;
@@ -16,7 +17,7 @@ const News = ({ article }) => {
 				{image}
 
 				<div className="card-content">
-					<h5 className="card-title">{title}</h5>
+					<h5 className="card-title ">{title}</h5>
 					<p>{description}</p>
 				</div>
 
@@ -33,6 +34,10 @@ const News = ({ article }) => {
 			</div>
 		</div>
 	);
+};
+
+News.propTypes = {
+	article: PropTypes.object.isRequired
 };
 
 export default News;
