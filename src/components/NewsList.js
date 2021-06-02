@@ -3,7 +3,7 @@ import News from './News';
 import PropTypes from 'prop-types';
 
 const NewsList = ({ articles }) => {
-	if (articles.lenght <= 0) return null;
+	if (articles === undefined) return null;
 
 	return (
 		<div className="row">
